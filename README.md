@@ -1,2 +1,1 @@
-# active-directory-lab
-Complete Proxmox virtualization setup guide with arhitecture diagrams, VM configs, and networking setup Documentation from my homelab infrastructure projec.
+Active Directory lab — domain controller, DNS, user provisioning, and domain join troubleshooting in a VirtualBox environment. Includes a full onboarding scenario with screenshots and a network diagram.
