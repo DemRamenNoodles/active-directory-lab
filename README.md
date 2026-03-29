@@ -1,12 +1,12 @@
 # Active Directory Lab
 
-A hands-on virtualization lab built to practice the same IT support scenarios I'd handle on the job — user provisioning, domain management, and troubleshooting authentication issues in a Windows environment.
+A hands-on virtualization lab built to practice the same IT support scenarios I'd handle on the job — user provisioning, domain management, and troubleshooting authentication issues in a Windows environment. Designed as the on-prem foundation for a hybrid identity setup, with Okta integration planned for cloud SSO.
 
 | | |
 |---|---|
 | **Type** | Infrastructure Lab |
 | **Focus** | Active Directory, DNS, Domain Join, User Provisioning |
-| **Status** | Complete — Expanding with Group Policy and Intune |
+| **Status** | Complete — Expanding with Group Policy and Okta integration |
 | **Environment** | VirtualBox on Windows 11, March 2026 |
 
 ---
