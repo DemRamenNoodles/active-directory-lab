@@ -166,7 +166,7 @@ If this were a real environment, I'd template this onboarding workflow — OU pl
 ## Planned Additions
 
 - **Group Policy** — Drive mappings by department, password policies, desktop configuration by OU.
-- **Intune enrollment** — Enroll ws01 in Microsoft Intune for endpoint management. Connects to my [Intune Helpdesk Case Study](https://github.com/DemRamenNoodles/intune-helpdesk-casestudy).
+- **Intune enrollment** — Enroll ws01 in Microsoft Intune using hybrid Azure AD join, adding cloud-based endpoint management alongside on-prem AD. Related: [Intune Helpdesk Case Study](https://github.com/DemRamenNoodles/intune-helpdesk-casestudy).
 - **Okta AD Agent** — Sync on-prem AD users to Okta for cloud SSO, bridging on-prem identity with cloud identity management. Backed by Okta super badges: [Integrate with Active Directory](https://www.credly.com/badges/071f487b-973b-4e5d-8568-a475d2db2e61), [Implement MFA with Okta](https://www.credly.com/badges/011ca1cf-2d9b-40dd-aa66-ebbe8d89f17f), and [Manage Users and Groups](https://www.credly.com/badges/48f539e0-29f5-48e6-8a24-1e01cfd45170).
 
 ---
