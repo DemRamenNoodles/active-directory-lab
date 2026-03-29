@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="headerGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1e3a5f"/>
+      <stop offset="100%" stop-color="#2a5298"/>
+    </linearGradient>
+    <linearGradient id="vmGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f4f6f9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="720" height="520" rx="12" fill="#f0f2f5"/>
+
+  <!-- Title -->
+  <text x="360" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#1e3a5f">AD Home Lab — Network Architecture</text>
+
+  <!-- Host machine box -->
+  <rect x="30" y="54" width="660" height="58" rx="8" fill="url(#headerGrad)" filter="url(#shadow)"/>
+  <text x="360" y="80" text-anchor="middle" font-size="14" font-weight="600" fill="#ffffff">Host Machine — AMD Ryzen 9 7900X · 64 GB RAM · Windows 11</text>
+  <text x="360" y="100" text-anchor="middle" font-size="11" fill="#b8cce4">Oracle VirtualBox 7 (Hypervisor)</text>
+
+  <!-- VirtualBox container -->
+  <rect x="30" y="122" width="660" height="320" rx="8" fill="#e8ecf1" stroke="#c5cdd8" stroke-width="1"/>
+  <text x="50" y="146" font-size="11" font-weight="600" fill="#5a6a7a">VirtualBox Internal Network: homelab  ·  10.0.0.0/24</text>
+
+  <!-- dc01 VM -->
+  <rect x="60" y="164" width="200" height="200" rx="8" fill="url(#vmGrad)" stroke="#2a5298" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="60" y="164" width="200" height="34" rx="8" fill="#2a5298"/>
+  <rect x="60" y="186" width="200" height="12" fill="#2a5298"/>
+  <text x="160" y="186" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">dc01</text>
+  <text x="160" y="218" text-anchor="middle" font-size="11" font-weight="600" fill="#1e3a5f">Windows Server 2022</text>
+  <text x="160" y="238" text-anchor="middle" font-size="10" fill="#5a6a7a">Active Directory Domain Services</text>
+  <text x="160" y="254" text-anchor="middle" font-size="10" fill="#5a6a7a">DNS Server</text>
+  <text x="160" y="274" text-anchor="middle" font-size="10" fill="#5a6a7a">Domain: homelab.local</text>
+  <line x1="80" y1="290" x2="240" y2="290" stroke="#dde2e8" stroke-width="1"/>
+  <text x="160" y="310" text-anchor="middle" font-size="11" font-weight="600" fill="#2a5298">10.0.0.10</text>
+  <text x="160" y="328" text-anchor="middle" font-size="10" fill="#5a6a7a">4 GB RAM · 2 vCPU · 60 GB</text>
+  <text x="160" y="346" text-anchor="middle" font-size="10" fill="#5a6a7a">DNS: 127.0.0.1 / 8.8.8.8</text>
+
+  <!-- ws01 VM -->
+  <rect x="460" y="164" width="200" height="200" rx="8" fill="url(#vmGrad)" stroke="#2a5298" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="460" y="164" width="200" height="34" rx="8" fill="#2a5298"/>
+  <rect x="460" y="186" width="200" height="12" fill="#2a5298"/>
+  <text x="560" y="186" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">ws01</text>
+  <text x="560" y="218" text-anchor="middle" font-size="11" font-weight="600" fill="#1e3a5f">Windows 11 Pro</text>
+  <text x="560" y="238" text-anchor="middle" font-size="10" fill="#5a6a7a">Domain-Joined Workstation</text>
+  <text x="560" y="254" text-anchor="middle" font-size="10" fill="#5a6a7a">Member of homelab.local</text>
+  <text x="560" y="274" text-anchor="middle" font-size="10" fill="#5a6a7a">User: HOMELAB\jmitchell</text>
+  <line x1="480" y1="290" x2="640" y2="290" stroke="#dde2e8" stroke-width="1"/>
+  <text x="560" y="310" text-anchor="middle" font-size="11" font-weight="600" fill="#2a5298">10.0.0.20</text>
+  <text x="560" y="328" text-anchor="middle" font-size="10" fill="#5a6a7a">4 GB RAM · 2 vCPU · 50 GB</text>
+  <text x="560" y="346" text-anchor="middle" font-size="10" fill="#5a6a7a">DNS: 10.0.0.10</text>
+
+  <!-- Connection line between VMs -->
+  <line x1="260" y1="264" x2="460" y2="264" stroke="#2a5298" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="360" y="256" text-anchor="middle" font-size="10" font-weight="600" fill="#2a5298">AD / DNS</text>
+  <text x="360" y="272" text-anchor="middle" font-size="9" fill="#5a6a7a">Authentication &amp; Name Resolution</text>
+
+  <!-- NAT labels -->
+  <rect x="60" y="374" width="200" height="24" rx="4" fill="#e3edfa" stroke="#b0c8e8" stroke-width="1"/>
+  <text x="160" y="390" text-anchor="middle" font-size="10" fill="#2a5298">Adapter 2: NAT (Internet)</text>
+
+  <rect x="460" y="374" width="200" height="24" rx="4" fill="#e3edfa" stroke="#b0c8e8" stroke-width="1"/>
+  <text x="560" y="390" text-anchor="middle" font-size="10" fill="#2a5298">Adapter 2: NAT (Internet)</text>
+
+  <!-- Internal network bar -->
+  <rect x="60" y="408" width="600" height="24" rx="4" fill="#2a5298"/>
+  <text x="360" y="424" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">Adapter 1: Internal Network "homelab" — 10.0.0.0/24</text>
+
+  <!-- Legend -->
+  <rect x="50" y="452" width="620" height="52" rx="6" fill="#ffffff" stroke="#dde2e8" stroke-width="1"/>
+  <text x="70" y="472" font-size="10" font-weight="600" fill="#1e3a5f">OUs:</text>
+  <rect x="96" y="462" width="10" height="10" rx="2" fill="#3b82f6"/>
+  <text x="112" y="472" font-size="10" fill="#5a6a7a">IT (bsmith)</text>
+  <rect x="188" y="462" width="10" height="10" rx="2" fill="#10b981"/>
+  <text x="204" y="472" font-size="10" fill="#5a6a7a">Marketing (jmitchell)</text>
+  <rect x="318" y="462" width="10" height="10" rx="2" fill="#f59e0b"/>
+  <text x="334" y="472" font-size="10" fill="#5a6a7a">HR (empty)</text>
+
+  <text x="70" y="494" font-size="10" font-weight="600" fill="#1e3a5f">Network:</text>
+  <line x1="126" y1="490" x2="156" y2="490" stroke="#2a5298" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="164" y="494" font-size="10" fill="#5a6a7a">AD/DNS traffic (Internal Network)</text>
+  <rect x="330" y="484" width="40" height="14" rx="3" fill="#e3edfa" stroke="#b0c8e8" stroke-width="1"/>
+  <text x="380" y="494" font-size="10" fill="#5a6a7a">NAT adapter for internet access</text>
+</svg>
