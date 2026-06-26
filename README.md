@@ -146,7 +146,7 @@ If this were a real environment, I'd template this onboarding workflow: OU place
 
 **The pieces don't work in isolation.** AD needs DNS, workstations need to find AD through DNS, and the network topology determines whether any of it works at all. Breaking it and fixing it is where the understanding actually sticks.
 
-**Building the lab is the easy part. Documenting it is the job.** Every decision (why static IPs, why department-based OUs, why DNS on the same box as the DC) has a reason. If I can't explain the reason, I don't understand the decision well enough.
+**Building the lab is the easy part. Documenting it is the job.**
 
 ---
 
